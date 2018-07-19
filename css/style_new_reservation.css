@@ -1,0 +1,18 @@
+body {
+  	font: 3vh 'Open Sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.field {
+	font-size:4vh;
+  	color: black;
+}
+
+.required {
+ 	color: red; 
+ 	font-size:2vh;
+ 	display:inline-block;
+}
+
+.input_form{
+	font-size: :4vh;
+}

@@ -1,0 +1,42 @@
+body {
+  font: 3vh 'Open Sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+p {
+    border-left: 6px solid red;
+    background-color: lightgrey;
+}
+
+.whole_screen {
+	height: 100vh;
+	width: 100vw;
+  	position: absolute;
+  	top: 0;
+}
+
+.main_toolbar {
+	height: 10vh;
+	width: 100vw;
+  	position: absolute;
+  	top: 0;
+}
+
+.main_screen {
+	font-size: 10vh;
+	text-align: center;
+	width: 100vw; 
+	height: 90vh;
+}
+
+#clock_date{
+	color:green;
+	font-size: 8vh;
+}
+
+#clock{
+	text-align: left;
+}
+
+#date{
+	float: right;
+}
