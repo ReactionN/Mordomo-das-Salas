@@ -130,7 +130,7 @@
 				</p>
 			</div>
 			<p class="info">
-				<a href="viewsemanal.html">
+				<a href="viewsemanal.php">
 					<img src="images/plusbutton.png" alt="Go to Weekly View Reservation" width="80" height="80border="0">info
 				</a>
 			</p>

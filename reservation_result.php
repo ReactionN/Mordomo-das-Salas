@@ -2,7 +2,7 @@
   <body style="font-size:4vh">
 
   <?php    
-  	include 'reservation_rules.php';
+    include 'reservation_rules.php';
 
     $servername = "localhost";
     $username = "root";
@@ -27,8 +27,8 @@
         $statement->bind_param("ssssss", $roomNumber, $startDateTime, $endDateTime, $host, $type, $active);
 
         $roomNumber = $_GET['roomNumber'];
-        $startDateTime = $_GET['startDateTime'];
-        $endDateTime = $_GET['endDateTime'];
+        $startDateTime = $_GET['startDate'] . "T" . $_GET['startHour'] . ":" . $_GET['startMinute'];
+        $endDateTime = $_GET['endDate'] . "T" . $_GET['endHour'] . ":" . $_GET['endMinute'];
         $host = $_GET['host'];
         $type = $_GET['type'];
         $active = 1;
@@ -36,7 +36,7 @@
         $result = overlapped_meetings($conn, $roomNumber, $startDateTime, $endDateTime);
 
         if ($result === false) {
-        	$statement->execute();
+            $statement->execute();
             echo 'The new reservation was booked successfully!', "\n";
         }
         else {

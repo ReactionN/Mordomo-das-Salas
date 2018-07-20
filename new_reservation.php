@@ -1,4 +1,4 @@
-<html>
+<html lang="pt-br">
 	<head>
 		<link id="css1" rel="stylesheet" type="text/css" href="css/style_new_reservation.css">
 	</head>
@@ -38,14 +38,18 @@
 
 			<p>
 				<div>Start Date: 
-					<input style="font-size:3vh" type='datetime-local' name='startDateTime' required="required">
+					<input style="font-size:3vh" type='date' name='startDate' required="required"> Start time:
+					<input style="font-size:3vh" type='number' name='startHour' oninput='format(this)' step='1' min='09' max='19' required="required"> h
+					<input style="font-size:3vh" type='number' name='startMinute' oninput='format(this)' step='15' min='00' max='45' required="required"> mins
 					<div class="required"> *required field </div>
 				</div>
 			</p>
 
 			<p>
 				<div>End Date: 
-					<input style="font-size:3vh" type='datetime-local' name='endDateTime' required="required">
+					<input style="font-size:3vh" type='date' name='endDate' required="required"> End time:
+					<input style="font-size:3vh" type='number' name='endHour' step='1' oninput='format(this)' min='09' max='19' required="required"> h
+					<input style="font-size:3vh" type='number' name='endMinute' step='15' oninput='format(this)' min='00' max='45' required="required"> mins
 					<div class="required"> *required field </div>
 				</div>
 			</p>
@@ -74,6 +78,13 @@
  			</p>
  		</div>
     </form>
+    <script>
+    	function format(input){
+  			if(input.value.length === 1){
+  				input.value = "0" + input.value;
+  			}
+		}
+    </script>
   </body>
 
 </html>
