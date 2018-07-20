@@ -25,9 +25,6 @@ function updateDate() {
 /* 
 funcion DataValidation (){
 
-
-
-	
 }
 */
 
