@@ -22,9 +22,17 @@ function updateDate() {
 	document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
 }
 
+/* 
+funcion DataValidation (){
+
+
+}
+*/
+
 /*function changeRoom() {
 	var div = document.getElementById("hiddenRoom");
 	var myRoom = div.textContent;
 
 	document.getElementById("room").innerHTML = "Room: " + myRoom;
 }
+*/ 
