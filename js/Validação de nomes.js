@@ -24,12 +24,13 @@ for(i=0 ; i < size ; i++)
 							{
 								//document.write(i);
 								cnt--;
-								if(space != 1 && i < size-1)
+								if( space!= 1 && i < size-1)
 								{
 									if(format.test(string[i+1]) == true)
 									{
 										cnt++;
 									}
+									space++;
 								}
 							}
         		}
@@ -46,9 +47,9 @@ for(i=0 ; i < size ; i++)
 }
 
 				document.write(cnt);
-				if(cnt !=0)
+				if(cnt !=0 || space == 0)
 					{
-						document.write("ja foste");
+						document.write("Nome mal inserido");
 					}
 }
 
