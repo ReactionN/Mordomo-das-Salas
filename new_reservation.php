@@ -1,6 +1,7 @@
-<html lang="pt-br">
+<html>
 	<head>
 		<link id="css1" rel="stylesheet" type="text/css" href="css/style_new_reservation.css">
+		<script src="js/validations.js"></script>
 	</head>
 	<body>
   	<?php   
@@ -18,7 +19,7 @@
 		} 
 	?>
 
-	<form action='reservation_result.php' method='get'>
+	<form action='reservation_result.php' name="reservationForm" onsubmit="return valName()" method='get'>
 		<h1>Make a new Reservation</h1>
 		<div class='field'>
 			<p>
@@ -56,7 +57,7 @@
 
 			<p>
 				<div>Host: 
-					<input style="font-size:3vh" type='text' name='host' required="required">
+					<input style="font-size:3vh" type='text' name="host" required="required">
 					<div class="required"> *required field </div>
 				</div>
 			</p>

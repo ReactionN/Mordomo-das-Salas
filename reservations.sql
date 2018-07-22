@@ -3,13 +3,13 @@ drop table if exists room;
 
 create table room 
 	(
-		roomNumber float,
+		roomNumber varchar(255),
 		primary key(roomNumber)
 	);
 
 create table reservation
 	(
-		roomNumber float,
+		roomNumber varchar(255),
 		startDateTime datetime,
 		endDateTime datetime,
 		host varchar(255),
@@ -19,6 +19,6 @@ create table reservation
  		foreign key(roomNumber) references room(roomNumber)
  	);
 
-insert into room values (16.01);
+insert into room values ('16.01');
 
-insert into reservation values (16.01, '2018-07-11T11:00', '2018-07-11T11:30', 'Manel', 'External Meeting (high priority)', 1);
+insert into reservation values ('16.01', '2018-07-11T11:00', '2018-07-11T11:30', 'Manel', 'External Meeting (high priority)', 1);
