@@ -19,7 +19,7 @@
 		} 
 	?>
 
-	<form action='reservation_result.php' name="reservationForm" onsubmit="return valName()" method='get'>
+	<form action='reservation_result.php' name="reservationForm" onsubmit="return valName() && dataValidation()" method='get'>
 		<h1>Make a new Reservation</h1>
 		<div class='field'>
 			<p>

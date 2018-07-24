@@ -77,7 +77,7 @@
 			$room = $_GET['roomNumber'];
 
 			//Give the current meeting if exists.
-			$sql = "SELECT * FROM display.reservation WHERE active=1 AND roomNumber=$room AND startDateTime<NOW() AND endDateTime>NOW()";
+			$sql = "SELECT * FROM display.reservation WHERE active=1 AND roomNumber='$room' AND startDateTime<NOW() AND endDateTime>NOW()";
 
 			$result = $conn->query($sql);
 
@@ -87,7 +87,7 @@
 			    $status = "images/occupied.jpg";
 			} else {
 				//Give the next meeting for this room if exists.
-				$until_sql = "SELECT * FROM display.reservation WHERE active=1 AND roomNumber=$room AND startDateTime = (SELECT MIN(startDateTime) FROM display.reservation WHERE active=1 AND roomNumber=$room)";
+				$until_sql = "SELECT * FROM display.reservation WHERE active=1 AND roomNumber='$room' AND startDateTime = (SELECT MIN(startDateTime) FROM display.reservation WHERE active=1 AND roomNumber='$room')";
 				$result_until = $conn->query($until_sql);
 				if ($result_until->num_rows > 0) {
 			    	// output data of each row
